@@ -4,12 +4,8 @@
   <p>1.<b>Enter your mturk ID:</b></p>
   <input v-model="mid" placehoder="Enter your mturk ID">
   <p>2. copy following link:</p>
-  <!-- The text field -->
-<input disabled type="text" value="https://www.lapro.io/supports/c_giveaway_disneyplus/?utm_source=mt&utm_campaign={{ mid }}" id="myInput">
-
-<!-- The button used to copy the text -->
-<button onclick="copytext()">Copy link</button>
-  <p style="background-color:grey;"></p>
+  
+  <p style="background-color:grey; padding:5px;">https://www.lapro.io/supports/c_giveaway_disneyplus/?utm_source=mt&utm_campaign={{ mid }}</p>
 
 </div>
 <script>
@@ -20,20 +16,6 @@ var app6 = new Vue({
   }
 })
 
-function copytext() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
 </script>
 
 
