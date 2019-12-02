@@ -7,7 +7,9 @@
   <input v-model="mid" placehoder="Enter your mturk ID">
   <p>2. copy following link - YOUR UNIQUE LINK:</p>
   
-  <p style="background-color:grey; padding:5px;">https://www.lapro.io/supports/c_giveaway_disneyplus/?utm_source=mt&utm_campaign={{ mid }}</p>
+  <p style="background-color:grey; padding:5px; color:blue;" v-if="mid != ''">
+	  https://www.lapro.io/supports/c_giveaway_disneyplus/?utm_source=mt&utm_campaign={{ mid }}
+</p>
   <hr>
   <p>Rules:</p>
   <p>
